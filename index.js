@@ -18,8 +18,6 @@ const generatePassword = () => {
   let data = [];
   let password = "";
 
-  console.log(data)
-
   if (lowercase.checked) data.push(...dataLowercase);
   if (uppercase.checked) data.push(...dataUppercase);
   if (numbers.checked) data.push(...dataNumbers);
@@ -39,11 +37,27 @@ const generatePassword = () => {
     password += data[Math.floor(Math.random() * data.length)];
   }
 
-  passwordOutput.value = password;
-  console.log(password)
+  
+  let chars = password.split(/(\d+)|(\W+)/).join("");
+
+
+  let splitResult = "";
+  
+
+  for (i = 0; i < chars.length; i++) {
+    if (isNaN(chars[i]) === false) {
+      splitResult += `<span class="number-color">${chars[i]}</span>`;
+    } else if(chars[i].match(/(\W+)/) !== null){
+      splitResult += `<span class="special-color">${chars[i]}</span>`;
+    }else{
+      splitResult += `<span class="string-color">${chars[i]}</span>`;
+    }
+  }
+
+  document.getElementById("password-result").innerHTML = splitResult;
+  console.log(splitResult);
 };
 
 btn.addEventListener("click", () => {
   generatePassword();
 });
-console.log(btn)

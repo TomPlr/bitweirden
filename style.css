@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-size: 1.1rem;
@@ -10,6 +10,23 @@
 body {
   background: rgb(101, 101, 124);
 }
+
+body .number-color{
+  color: orange;
+}
+
+body .string-color{
+  color: white;
+}
+
+body .special-color{
+  color: rgb(226, 74, 226);
+}
+
+#password-result {
+  margin: 0 auto;
+}
+
 body .app {
   background: rgb(63, 63, 80);
   border-radius: 5px;
