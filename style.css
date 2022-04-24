@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+/* --------------- BODY ---------------- */
+body {
+  background: rgb(101, 101, 124);
+}
+body .app {
+  background: rgb(63, 63, 80);
+  border-radius: 5px;
+  height: 700px;
+  width: 390px;
+  min-width: 325px;
+  margin: 100px auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: white;
+}
+
+body section {
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(80, 80, 102);
+  width: 350px;
+  min-width: 350px;
+}
+
+/* --------------- SECTION ---------------- */
+
+section div {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+}
+
+.properties{
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(58, 56, 56);
+}
+
+#password-actions {
+  height: 80px;
+}
+
+#password-actions button {
+  background: rgb(80, 80, 102);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 15px;
+  text-align: left;
+}
+
+#length-property {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+#password-properties {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  padding: 0px 0px 0px 15px;
+}
+
+#password-length{
+    width: 150px
+}
+
+#special{
+    padding-bottom: 5px;
+}
+
+#password-properties .input-padding{
+   margin-right: 15px;
+}
+
+#length-property{
+    display: flex;
+    justify-content: space-between;
+}
+
+#display-password-length{
+    width: 35px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+#password-kind div {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  height: 30px;
+  align-items: center;
+}
+
+#password-kind div input {
+  align-items: center;
+}
+
+#password-additional-properties{
+    height: 130px;
+    padding: 0px 0px 0px 15px;
+    
+
+}
+#password-additional-properties div{
+    height: 33%;
+    align-items: center;
+}
+#password-additional-properties div span{
+    font-size: 1rem;
+    padding-right: 5px;
+}
+
+/* --------------- INPUT ---------------- */
+
+input#password-output {
+  background: none;
+  border: none;
+  color: white;
+  text-align: center;
+  height: 70px;
+}
+

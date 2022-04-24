@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BitGardien</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <input
+        type="text"
+        id="password-output"
+        value=" Votre mot de passe"
+        readonly
+      />
+
+      <section id="password-actions">
+        <button id="btn">Generate Password</button>
+        <button>Copy Password</button>
+      </section>
+
+      <section id="password-kind">
+        <div>
+          <input type="checkbox" name="password" id="password-selected" checked="true"/>
+          <label for="Password">Password</label>
+        </div>
+        <div>
+          <input type="checkbox" name="Passphrase" id="passphrase-selected" disabled="disabled/>
+          <label for="passphrase">Passphrase (Soon !)</label>
+        </div>
+      </section>
+
+      <section id="password-properties">
+        <div id="length-property" class="properties">
+          <span>Length</span>
+          <input type="text" id="display-password-length" value="12" readonly/>
+          <input
+            class="input-padding"
+            type="range"
+            id="password-length"
+            min="8"
+            max="30"
+            value="12"
+            oninput="document.getElementById('display-password-length').value=this.value"
+          />
+        </div>
+
+        <div id="uppercases" class="properties">
+          <label for="uppercase-check">A-Z</label>
+          <input type="checkbox" name="uppercase-check" id="uppercase-check" class="input-padding" />
+        </div>
+        <div id="lowercases" class="properties">
+          <label for="lowercase-check">a-z</label>
+          <input type="checkbox" name="lowercase-check" id="lowercase-check" class="input-padding" />
+        </div>
+        <div id="numbers" class="properties">
+          <label for="number-check">0-9</label>
+          <input type="checkbox" name="number-check" id="number-check" class="input-padding" />
+        </div>
+        <div id="special">
+          <label for="special-check">!@#$%^&*</label>
+          <input type="checkbox" name="special-check" id="special-check" class="input-padding" />
+        </div>
+      </section>
+
+      <section id="password-additional-properties">
+        <div class="properties additional-properties">
+          <span>Minimum Numbers</span>
+          <span>Soon !</span>
+        </div>
+        <div class="properties additional-properties">
+          <span>Minimum Special</span>
+          <span>Soon !</span>
+        </div>
+        <div class="additional-properties">
+          <span>Avoid Ambiguous Characters</span>
+          <span>Soon !</span>
+        </div>
+      </section>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
