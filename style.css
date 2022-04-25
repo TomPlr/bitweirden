@@ -11,16 +11,22 @@ body {
   background: rgb(101, 101, 124);
 }
 
-body .number-color{
+.special-color {
   color: orange;
 }
 
-body .string-color{
+.string-color {
   color: white;
 }
 
-body .special-color{
-  color: rgb(226, 74, 226);
+.number-color {
+  color: rgb(147, 196, 252);
+}
+
+span.soon{
+  color: rgb(204, 155, 63);
+  transform: rotate(-9deg);
+  font-size: 1rem;
 }
 
 #password-result {
@@ -38,7 +44,6 @@ body .app {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   color: white;
 }
 
@@ -59,24 +64,24 @@ body section {
 section div {
   display: flex;
   justify-content: space-between;
-  padding-left: 15px;
+  
 }
 
-.properties{
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgb(58, 56, 56);
+.properties {
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(58, 56, 56);
 }
 
 #password-actions {
-  height: 80px;
+  height: 100px;
 }
 
 #password-actions button {
+  height: 50%;
   background: rgb(80, 80, 102);
   color: white;
   border: none;
   cursor: pointer;
-  padding: 5px 15px;
   text-align: left;
 }
 
@@ -94,54 +99,56 @@ section div {
   padding: 0px 0px 0px 15px;
 }
 
-#password-length{
-    width: 150px
+#password-length {
+  width: 150px;
 }
 
-#special{
-    padding-bottom: 5px;
+#special {
+  padding-bottom: 5px;
 }
 
-#password-properties .input-padding{
-   margin-right: 15px;
+#password-properties .input-padding {
+  margin-right: 15px;
 }
 
-#length-property{
-    display: flex;
-    justify-content: space-between;
+#length-property {
+  display: flex;
+  justify-content: space-between;
 }
 
-#display-password-length{
-    width: 35px;
-    background: none;
-    border: none;
-    color: white;
+#display-password-length {
+  width: 35px;
+  background: none;
+  border: none;
+  color: white;
 }
 
 #password-kind div {
   display: grid;
-  grid-template-columns: 10% 90%;
-  height: 30px;
+  grid-template-columns: 10% 75% 25%;
+  height: 40px;
   align-items: center;
+  padding-right: 20px;
+}
+#password-kind div span{
+  width: 70px;
 }
 
 #password-kind div input {
   align-items: center;
 }
 
-#password-additional-properties{
-    height: 130px;
-    padding: 0px 0px 0px 15px;
-    
-
+#password-additional-properties {
+  height: 130px;
+  padding: 0px 0px 0px 15px;
 }
-#password-additional-properties div{
-    height: 33%;
-    align-items: center;
+#password-additional-properties div {
+  height: 33%;
+  align-items: center;
 }
-#password-additional-properties div span{
-    font-size: 1rem;
-    padding-right: 5px;
+#password-additional-properties div span {
+  font-size: 1rem;
+  padding-right: 15px;
 }
 
 /* --------------- INPUT ---------------- */
@@ -153,4 +160,3 @@ input#password-output {
   text-align: center;
   height: 70px;
 }
-
