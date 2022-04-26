@@ -3,7 +3,7 @@ const dataUppercase = dataLowercase.toUpperCase();
 const dataNumbers = "0123456789";
 const dataSpecial = "!@#$%^&*";
 
-let passwordCopied = "";
+let passwordCopy = "";
 
 passwordSelected = document.getElementById("password-selected");
 lowercase = document.getElementById("lowercase-check");
@@ -11,7 +11,6 @@ uppercase = document.getElementById("uppercase-check");
 numbers = document.getElementById("number-check");
 specials = document.getElementById("special-check");
 displayPasswordLength = document.getElementById("display-password-length");
-passwordOutput = document.getElementById("password-output");
 
 const generatePassword = () => {
   let data = [];
@@ -37,17 +36,15 @@ const generatePassword = () => {
     password += data[Math.floor(Math.random() * data.length)];
   }
 
-  passwordCopied = password;
+  passwordCopy = password;
 
-  let chars = password.split(/(\d+)|(\W+)/).join("");
-
-  for (i = 0; i < chars.length; i++) {
-    if (isNaN(chars[i]) === false) {
-      splitResult += `<span class="number-color">${chars[i]}</span>`;
-    } else if (chars[i].match(/(\W+)/) !== null) {
-      splitResult += `<span class="special-color">${chars[i]}</span>`;
+  for (i = 0; i < password.length; i++) {
+    if (isNaN(password[i]) === false) {
+      splitResult += `<span class="number-color">${password[i]}</span>`;
+    } else if (password[i].match(/(\w+)/) === null) {
+      splitResult += `<span class="special-color">${password[i]}</span>`;
     } else {
-      splitResult += `<span class="string-color">${chars[i]}</span>`;
+      splitResult += `<span class="string-color">${password[i]}</span>`;
     }
   }
 
@@ -59,6 +56,9 @@ btnPwd.addEventListener("click", () => {
 });
 
 btnCopy.addEventListener("click", () => {
-  navigator.clipboard.writeText(passwordCopied);
-  alert("Mot de passe copié !")
+  navigator.clipboard.writeText(passwordCopy);
+  btnCopy.textContent = "Copied !";
+  setTimeout(() => {
+    btnCopy.textContent = "Copy Password";
+  }, 2000);
 });
